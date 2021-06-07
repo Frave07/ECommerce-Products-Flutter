@@ -14,8 +14,8 @@ class StripeService
   factory StripeService() => _intance;
 
   String _paymentApiUrl = "https://api.stripe.com/v1/payment_intents";
-  String _secretKey = "sk_test_51IXiDtBlraKBsYAD7abXsHXW32PhAPxuERW2c3ku6qAHIy5NmSBOxGGxaK0usdB7XD6ByOOExGNHSqFWUL9tksCe00fx51Zweh";
-  String _apiKey = "pk_test_51IXiDtBlraKBsYAD5rljhGechxd1oksQGxnBsj7MqdloyHpkQiIOhApO9W7dd4kNpjzYvYecMPizn1eZ6C44llCe00A6jYaTHq";
+  String _secretKey = "Here your Secret Key - Stripe";
+  String _apiKey = "Here you Api Key - Stripe";
 
   void init(){
 
