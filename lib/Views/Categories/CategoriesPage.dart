@@ -73,13 +73,13 @@ class _ListCategories extends StatelessWidget
           ),
           child: Column(
             children: [
-              SvgPicture.network('http://192.168.1.16:7070/'+ list[i].picture, height: 85, color: Color(0xff0C6CF2)),
+              SvgPicture.network('http://192.168.1.35:7070/'+ list[i].picture, height: 85, color: Color(0xff0C6CF2)),
               SizedBox(height: 10.0),
               TextFrave(text: list[i].category, fontSize: 22)
             ],
           ),
         ),
-        onTap: () => Navigator.of(context).push(rutaFrave(page: CategoryProductsPage(uidCategory: list[i].uidCategory.toString(), category: list[i].category), curved: Curves.easeInOut))
+        onTap: () => Navigator.of(context).push(rutaFrave(page: CategoryProductsPage(uidCategory: list[i].id, category: list[i].category), curved: Curves.easeInOut))
       ),
     );
   }

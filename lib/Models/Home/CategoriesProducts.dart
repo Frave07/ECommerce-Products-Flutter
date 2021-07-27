@@ -1,25 +1,24 @@
 import 'dart:convert';
 
-CategoriesProducts homeCarouselFromJson(String str) => CategoriesProducts.fromJson(json.decode(str));
+CategoriesProducts categoriesProductsFromJson(String str) => CategoriesProducts.fromJson(json.decode(str));
 
-String homeCarouselToJson(CategoriesProducts data) => json.encode(data.toJson());
+String categoriesProductsToJson(CategoriesProducts data) => json.encode(data.toJson());
 
 class CategoriesProducts {
-
-    bool resp;
-    String msj;
-    List<Category> categories;
-
     CategoriesProducts({
         this.resp,
         this.msj,
         this.categories,
     });
 
+    bool resp;
+    String msj;
+    List<Category> categories;
+
     factory CategoriesProducts.fromJson(Map<String, dynamic> json) => CategoriesProducts(
         resp: json["resp"],
         msj: json["msj"],
-        categories: List<Category>.from(json["categories"].map((x) => Category.fromJson(x))).toList(),
+        categories: List<Category>.from(json["categories"].map((x) => Category.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
@@ -30,30 +29,33 @@ class CategoriesProducts {
 }
 
 class Category {
-
-    int uidCategory;
-    String category;
-    String picture;
-    int status;
-
     Category({
-        this.uidCategory,
+        this.status,
+        this.id,
         this.category,
         this.picture,
-        this.status,
+        this.v,
     });
 
+    bool status;
+    String id;
+    String category;
+    String picture;
+    int v;
+
     factory Category.fromJson(Map<String, dynamic> json) => Category(
-        uidCategory: json["uidCategory"],
-        category: json["category"],
-        picture: json['picture'],
         status: json["status"],
+        id: json["_id"],
+        category: json["category"],
+        picture: json["picture"],
+        v: json["__v"],
     );
 
     Map<String, dynamic> toJson() => {
-        "uidCategory": uidCategory,
+        "status": status,
+        "_id": id,
         "category": category,
         "picture": picture,
-        "status": status,
+        "__v": v,
     };
 }

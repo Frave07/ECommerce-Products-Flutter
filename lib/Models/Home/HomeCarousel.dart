@@ -5,21 +5,20 @@ HomeCarousel homeCarouselFromJson(String str) => HomeCarousel.fromJson(json.deco
 String homeCarouselToJson(HomeCarousel data) => json.encode(data.toJson());
 
 class HomeCarousel {
-
-    bool resp;
-    String msj;
-    List<SliderHome> slider;
-
     HomeCarousel({
         this.resp,
         this.msj,
         this.slider,
     });
 
+    bool resp;
+    String msj;
+    List<SliderHome> slider;
+
     factory HomeCarousel.fromJson(Map<String, dynamic> json) => HomeCarousel(
         resp: json["resp"],
         msj: json["msj"],
-        slider: List<SliderHome>.from(json["slider"].map((x) => SliderHome.fromJson(x))).toList(),
+        slider: List<SliderHome>.from(json["slider"].map((x) => SliderHome.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
@@ -30,26 +29,29 @@ class HomeCarousel {
 }
 
 class SliderHome {
-
-    int uidCarousel;
-    String image;
-    String category;
-
     SliderHome({
-        this.uidCarousel,
+        this.id,
         this.image,
         this.category,
+        this.v,
     });
 
+    String id;
+    String image;
+    String category;
+    int v;
+
     factory SliderHome.fromJson(Map<String, dynamic> json) => SliderHome(
-        uidCarousel: json["uidCarousel"],
+        id: json["_id"],
         image: json["image"],
         category: json["category"],
+        v: json["__v"],
     );
 
     Map<String, dynamic> toJson() => {
-        "uidCarousel": uidCarousel,
+        "_id": id,
         "image": image,
         "category": category,
+        "__v": v,
     };
 }

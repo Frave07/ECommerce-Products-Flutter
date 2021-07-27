@@ -128,10 +128,10 @@ class ProductFavorite extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Image.network('http://192.168.1.16:7070/' + product.picture, height: 140 ),
-            TextFrave(text: product.nameProduct, fontSize: 17, textOverflow: TextOverflow.ellipsis ),
+            Image.network('http://192.168.1.35:7070/' + product.productId.picture, height: 140 ),
+            TextFrave(text: product.productId.nameProduct, fontSize: 17, textOverflow: TextOverflow.ellipsis ),
             SizedBox(height: 10.0),
-            TextFrave(text: '\$ ${product.price}', fontSize: 21, fontWeight: FontWeight.bold),
+            TextFrave(text: '\$ ${product.productId.price}', fontSize: 21, fontWeight: FontWeight.bold),
           ],
         ),
       ),

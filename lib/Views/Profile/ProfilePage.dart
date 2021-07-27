@@ -135,7 +135,7 @@ class _ListProfileState extends State<ListProfile>
                             shape: BoxShape.circle,
                             image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: NetworkImage( 'http://192.168.1.16:7070/' + state.profile.toString() )
+                              image: NetworkImage( 'http://192.168.1.35:7070/' + state.profile.toString() )
                             )
                           ),
                         ),

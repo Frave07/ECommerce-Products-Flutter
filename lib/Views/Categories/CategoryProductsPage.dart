@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 
 class CategoryProductsPage extends StatefulWidget {
+
   final String uidCategory;
   final String category;
 
@@ -73,8 +74,8 @@ class _CategoryProductsPageState extends State<CategoryProductsPage>
                     children: [
                       Container(
                           child: Hero(
-                            tag: listProduct[i].uidProduct.toString(),
-                            child: Image.network('http://192.168.1.16:7070/'+ listProduct[i].picture, height: 150,)
+                            tag: listProduct[i].id,
+                            child: Image.network('http://192.168.1.35:7070/'+ listProduct[i].picture, height: 150,)
                           ),
                         ),
                         SizedBox(height: 10.0),

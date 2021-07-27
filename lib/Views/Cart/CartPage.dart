@@ -125,7 +125,7 @@ class _DetailsProducts extends StatelessWidget {
                       children: [
                         Container(
                           width: 100,
-                          child: Image.network('http://192.168.1.16:7070/'+ state.products[i].image )
+                          child: Image.network('http://192.168.1.35:7070/'+ state.products[i].image )
                         ),
                         SizedBox(width: 10.0),
                         Column(
@@ -237,7 +237,15 @@ class _AppBarCart extends StatelessWidget {
           
           Container(
             child: BlocBuilder<ProductBloc, ProductState>(
-              builder: (_, state) => TextFrave(text: '${state.products.length} items', fontSize: 19, color: Colors.black54 ),
+              // builder: (_, state) => TextFrave(text: '${state.products.length} items', fontSize: 19, color: Colors.black54 ),
+              builder: (_, state) {
+                
+                if( state.products == null ){
+                  return TextFrave(text: '0 items', fontSize: 19, color: Colors.black54 );
+                }
+
+                return TextFrave(text: '${state.products.length} items', fontSize: 19, color: Colors.black54 );
+              } 
             )
           ),
         ],
@@ -254,7 +262,7 @@ class WithoutProducts extends StatelessWidget {
   {
     return BlocBuilder<ProductBloc, ProductState>(
       builder: (_, state) 
-        => (state.products.length == 0 ) 
+        => (state.products == null ) 
            ? Container(
               height: 270,
               child: Column(

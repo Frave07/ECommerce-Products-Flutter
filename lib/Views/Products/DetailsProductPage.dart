@@ -32,9 +32,9 @@ class DetailsProductPage extends StatelessWidget
             ListView(
               padding: EdgeInsets.only(top: 10.0, bottom: 100.0),
               children: [
-                _AppBarProduct(nameProduct: product.nameProduct, uidProduct: product.uidProduct.toString() ),
+                _AppBarProduct(nameProduct: product.nameProduct, uidProduct: product.id ),
                 SizedBox(height: 20.0),
-                _ImageProduct( uidProduct: product.uidProduct.toString(), imageProduct: product.picture),
+                _ImageProduct( uidProduct: product.id, imageProduct: product.picture),
 
                 SizedBox(height: 15.0),
                 Padding(
@@ -166,7 +166,7 @@ class DetailsProductPage extends StatelessWidget
                           modalAddCartSuccess(context, product.picture );
 
                           final productSelect = ProductCart(
-                              uidProduct: product.uidProduct.toString(), 
+                              uidProduct: product.id, 
                               image: product.picture, 
                               name: product.nameProduct, 
                               price: product.price.toDouble(),
@@ -196,7 +196,7 @@ class DetailsProductPage extends StatelessWidget
                         onPressed: (){
 
                           final productSelect = ProductCart(
-                              uidProduct: product.uidProduct.toString(), 
+                              uidProduct: product.id, 
                               image: product.picture, 
                               name: product.nameProduct, 
                               price: product.price.toDouble(),
@@ -265,7 +265,7 @@ class _ImageProduct extends StatelessWidget {
       child: Container(
         height: 250,
         width: MediaQuery.of(context).size.width,
-        child: Image.network('http://192.168.1.16:7070/'+ imageProduct),
+        child: Image.network('http://192.168.1.35:7070/'+ imageProduct),
       ),
     );
   }

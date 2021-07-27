@@ -47,7 +47,7 @@ class _DetailsProductsBuy extends StatelessWidget {
     return ListView.builder(
       physics: BouncingScrollPhysics(),
       padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
-      itemCount: purchased.orderBuy.length,
+      itemCount: purchased.orderDetails.length,
       itemBuilder: (_, i) 
         => Container(
           height: 400,
@@ -60,13 +60,13 @@ class _DetailsProductsBuy extends StatelessWidget {
           child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(child: TextFrave(text: purchased.orderBuy[i].receipt, fontSize: 21)),
+            Center(child: TextFrave(text: purchased.orderBuy.receipt, fontSize: 21)),
             SizedBox(height: 10.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextFrave(text: 'Date ', fontSize: 19, color: Colors.grey ),
-                TextFrave(text: '${purchased.orderBuy[i].datee}', fontSize: 19 ),
+                TextFrave(text: '${purchased.orderBuy.datee}', fontSize: 19 ),
               ],
             ),
             SizedBox(height: 10.0),
@@ -74,7 +74,7 @@ class _DetailsProductsBuy extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextFrave(text: 'Amount ', fontSize: 19, color: Colors.grey ),
-                TextFrave(text: '\$ ${purchased.orderBuy[i].amount}', fontSize: 19 ),
+                TextFrave(text: '\$ ${purchased.orderBuy.amount}', fontSize: 19 ),
               ],
             ),
             SizedBox(height: 10.0),
@@ -106,7 +106,7 @@ class _DetailsProductsBuy extends StatelessWidget {
                           Container(
                             height: 150,
                             width: 100,
-                            child: Image.network('http://192.168.1.16:7070/'+ purchased.orderDetails[i].picture ),
+                            child: Image.network('http://192.168.1.35:7070/'+ purchased.orderDetails[i].productId.picture ),
                           ),
                           Container(
                             padding: EdgeInsets.all(10.0),
@@ -117,7 +117,7 @@ class _DetailsProductsBuy extends StatelessWidget {
                               children: [
                                 Wrap(
                                   children: [
-                                    TextFrave(text: purchased.orderDetails[i].nameProduct , fontSize: 17 ),
+                                    TextFrave(text: purchased.orderDetails[i].productId.nameProduct , fontSize: 17 ),
                                   ],
                                 ),
                                 SizedBox(height: 10.0),

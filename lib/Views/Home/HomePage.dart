@@ -253,8 +253,8 @@ class _ListProducts extends StatelessWidget {
                   children: [
                     Container(
                       child: Hero(
-                        tag: list[i].uidProduct.toString(),
-                        child: Image.network('http://192.168.1.16:7070/'+ list[i].picture, height: 150,)
+                        tag: list[i].id,
+                        child: Image.network('http://192.168.1.35:7070/'+ list[i].picture, height: 150,)
                       ),
                     ),
                     Text(
@@ -342,7 +342,7 @@ class _CarCarousel extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15.0),
                     image: DecorationImage(
                       fit: BoxFit.fill,
-                      image: NetworkImage('http://192.168.1.16:7070/'+ silerHome[i].image)
+                      image: NetworkImage('http://192.168.1.35:7070/'+ silerHome[i].image)
                     )
                   ),
                 );
