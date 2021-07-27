@@ -8,7 +8,7 @@ import 'package:http/http.dart' as http;
 
 class AuthController
 {
-    String server = 'http://192.168.1.16:7070/api';
+    String server = 'http://192.168.1.35:7070/api';
 
     final secureStorage = FlutterSecureStorage();
 

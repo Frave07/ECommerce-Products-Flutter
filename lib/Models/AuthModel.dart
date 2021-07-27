@@ -41,7 +41,7 @@ class Users {
         this.profile
     });
 
-    int id;
+    String id;
     String email;
     String users;
     String profile;

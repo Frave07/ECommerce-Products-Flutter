@@ -9,7 +9,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 class PersonalController 
 {
 
-    String server = 'http://192.168.1.16:7070/api';
+    String server = 'http://192.168.1.35:7070/api';
 
     final secureStorage = FlutterSecureStorage();
 
