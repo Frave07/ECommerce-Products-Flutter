@@ -3,51 +3,69 @@ part of 'product_bloc.dart';
 @immutable
 abstract class ProductEvent {}
 
-class AddOrDeleteProductFavorite extends ProductEvent{
+
+class OnAddOrDeleteProductFavoriteEvent extends ProductEvent{
   final String uidProduct;
 
-  AddOrDeleteProductFavorite({this.uidProduct});
+  OnAddOrDeleteProductFavoriteEvent({required this.uidProduct});
 }
 
 
-class AddProductToCart extends ProductEvent {
+class OnAddProductToCartEvent extends ProductEvent {
   final ProductCart product;
 
-  AddProductToCart({this.product});
+  OnAddProductToCartEvent(this.product);
 }
 
 
-class DeleteProductToCart extends ProductEvent {
-
+class OnDeleteProductToCartEvent extends ProductEvent {
   final int index;
 
-  DeleteProductToCart({this.index});
+  OnDeleteProductToCartEvent(this.index);
 
 }
 
 
-class PlusQuantityProduct extends ProductEvent {
+class OnPlusQuantityProductEvent extends ProductEvent {
   final int plus;
 
-  PlusQuantityProduct({this.plus});
+  OnPlusQuantityProductEvent(this.plus);
 }
 
 
-class SubtractQuantityProductEvent extends ProductEvent {
+class OnSubtractQuantityProductEvent extends ProductEvent {
   final int subtract;
 
-  SubtractQuantityProductEvent({this.subtract});
+  OnSubtractQuantityProductEvent(this.subtract);
 }
 
 
-class SaveProductsBuy extends ProductEvent { 
-  final String user;
-  final String date;
+class OnClearProductsEvent extends ProductEvent {}
+
+
+class OnSaveProductsBuyToDatabaseEvent extends ProductEvent { 
   final String amount;
-  final List product;
+  final List<ProductCart> product;
 
-  SaveProductsBuy({this.user, this.date, this.amount, this.product});
+  OnSaveProductsBuyToDatabaseEvent(this.amount, this.product);
 }
 
 
-class ClearProductsEvent extends ProductEvent {}
+class OnSelectPathImageProductEvent extends ProductEvent {
+  final String image;
+
+  OnSelectPathImageProductEvent(this.image);
+}
+
+class OnSaveNewProductEvent extends ProductEvent {
+  final String name;
+  final String description;
+  final String stock;
+  final String price;
+  final String uidCategory;
+  final String image;
+
+  OnSaveNewProductEvent(this.name, this.description, this.stock, this.price, this.uidCategory, this.image);
+}
+
+

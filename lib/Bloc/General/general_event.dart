@@ -4,8 +4,8 @@ part of 'general_bloc.dart';
 abstract class GeneralEvent {}
 
 
-class OnShowHideMenuHome extends GeneralEvent {
+class OnShowOrHideMenuEvent extends GeneralEvent {
   final bool showMenu;
 
-  OnShowHideMenuHome({this.showMenu});
+  OnShowOrHideMenuEvent({required this.showMenu});
 }

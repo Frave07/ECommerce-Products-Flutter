@@ -1,19 +1,22 @@
 part of 'general_bloc.dart';
 
 @immutable
-class GeneralState {
+abstract class GeneralState {
 
   final bool showMenuHome;
 
   GeneralState({
     this.showMenuHome = true
   });
+}
 
 
-  GeneralState copyWith({ bool showMenuHome })
-    => GeneralState(
-      showMenuHome: showMenuHome ?? this.showMenuHome
-    );
-  
+
+class GeneralInitial extends GeneralState {}
+
+class SetMenuHomeState extends GeneralState{
+  final bool menu;
+
+  SetMenuHomeState({required this.menu}) : super(showMenuHome: menu);
 }
 

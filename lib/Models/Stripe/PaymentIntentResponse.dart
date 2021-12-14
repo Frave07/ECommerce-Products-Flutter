@@ -6,32 +6,32 @@ String paymentIntentResponseToJson(PaymentIntentResponse data) => json.encode(da
 
 class PaymentIntentResponse {
     PaymentIntentResponse({
-        this.id,
-        this.object,
-        this.amount,
-        this.amountCapturable,
-        this.amountReceived,
+        required this.id,
+        required this.object,
+        required this.amount,
+        required this.amountCapturable,
+        required this.amountReceived,
         this.application,
         this.applicationFeeAmount,
         this.canceledAt,
         this.cancellationReason,
-        this.captureMethod,
-        this.charges,
-        this.clientSecret,
-        this.confirmationMethod,
-        this.created,
-        this.currency,
+        required this.captureMethod,
+        required this.charges,
+        required this.clientSecret,
+        required this.confirmationMethod,
+        required this.created,
+        required this.currency,
         this.customer,
         this.description,
         this.invoice,
         this.lastPaymentError,
-        this.livemode,
-        this.metadata,
+        required this.livemode,
+        required this.metadata,
         this.nextAction,
         this.onBehalfOf,
         this.paymentMethod,
-        this.paymentMethodOptions,
-        this.paymentMethodTypes,
+        required this.paymentMethodOptions,
+        required this.paymentMethodTypes,
         this.receiptEmail,
         this.review,
         this.setupFutureUsage,
@@ -39,7 +39,7 @@ class PaymentIntentResponse {
         this.source,
         this.statementDescriptor,
         this.statementDescriptorSuffix,
-        this.status,
+        required this.status,
         this.transferData,
         this.transferGroup,
     });
@@ -162,11 +162,11 @@ class PaymentIntentResponse {
 
 class Charges {
     Charges({
-        this.object,
-        this.data,
-        this.hasMore,
-        this.totalCount,
-        this.url,
+        required this.object,
+        required this.data,
+        required this.hasMore,
+        required this.totalCount,
+        required this.url,
     });
 
     String object;
@@ -204,7 +204,7 @@ class Metadata {
 
 class PaymentMethodOptions {
     PaymentMethodOptions({
-        this.card,
+        required this.card,
     });
 
     Card card;
@@ -222,7 +222,7 @@ class Card {
     Card({
         this.installments,
         this.network,
-        this.requestThreeDSecure,
+        required this.requestThreeDSecure,
     });
 
     dynamic installments;

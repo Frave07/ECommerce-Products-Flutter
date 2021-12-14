@@ -1,34 +1,28 @@
 part of 'cart_bloc.dart';
 
 @immutable
-class CartState {
+abstract class CartState {
 
   final String totalAmount;
   final String currency;
-  final bool cardActive;
-  final CreditCardFrave creditCardFrave;
+  final bool? cardActive;
+  final CreditCardFrave? creditCardFrave;
 
 
   const CartState({
     this.totalAmount = '00.0', 
-    this.currency    = 'USD', 
-    this.cardActive  = false, 
+    this.currency    = 'USD',
+    this.cardActive,
     this.creditCardFrave 
   });
 
   // String get amountPayString => '${ ( this.totalAmount * 100 ).floor() }';
-
-
-  CartState copyWith({String totalAmount, String currency, bool cardActive, CreditCardFrave creditCardFrave })
-    => CartState(
-      totalAmount : totalAmount ?? this.totalAmount,
-      currency : currency ?? this.currency,
-      cardActive : cardActive ?? this.cardActive,
-      creditCardFrave : creditCardFrave ?? this.creditCardFrave
-    );
-
 }
 
+class CartInitial extends CartState {
+
+  CartInitial():super(cardActive: false);
+}
 
 class LoadingPaymentState extends CartState {}
 
@@ -37,5 +31,12 @@ class SuccessPaymentState extends CartState {}
 class FailurePaymentState extends CartState {
   final String err;
 
-  FailurePaymentState({this.err});
+  FailurePaymentState(this.err);
+}
+
+class SetActiveCardState extends CartState {
+  final bool active;
+  final CreditCardFrave creditCard;
+
+  SetActiveCardState({required this.active, required this.creditCard}): super(cardActive: active, creditCardFrave: creditCard);
 }

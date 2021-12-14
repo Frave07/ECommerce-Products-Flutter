@@ -4,19 +4,19 @@ part of 'cart_bloc.dart';
 abstract class CartEvent {}
 
 
-class OnSelectCard extends CartEvent {
+class OnSelectCardEvent extends CartEvent {
   final CreditCardFrave creditCardFrave;
 
-  OnSelectCard({this.creditCardFrave});
+  OnSelectCardEvent(this.creditCardFrave);
 }
 
 
 class OnCancelCart extends CartEvent {}
 
 
-class OnMakePayment extends CartEvent {
+class OnMakePaymentEvent extends CartEvent {
   final String amount;
   final CreditCardFrave creditCardFrave;
 
-  OnMakePayment({this.amount, this.creditCardFrave });
+  OnMakePaymentEvent({ required this.amount, required this.creditCardFrave });
 }
