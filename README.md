@@ -26,6 +26,7 @@ ___
 
 <a href="https://www.buymeacoffee.com/frave"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="200"></a>
 <a href="https://www.paypal.me/Fpereza"><img src="https://img.flaticon.com/icons/png/512/888/888870.png" width="60"></a>
+<a>[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I1C3R4S)</a>
 
 ## Backend
 
