@@ -68,9 +68,9 @@ ___
         <th style="text-align:center">Register Screen</th>
     </tr>
     <tr>
-        <td><img src="./screenshot/splash.png" alt="" width="200"></td>
-        <td><img src="./screenshot/Screenshot_20210607-143121.png" alt="" width="200"></td>
-        <td><img src="./screenshot/Register.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/splash.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/Screenshot_20210607-143121.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/Register.png" alt="" width="200"></td>
     <tr>
 </table>
 
@@ -81,9 +81,9 @@ ___
         <th style="text-align:center">Account Screen</th>
     </tr>
     <tr>
-        <td><img src="./screenshot/Login.png" alt="" width="200"></td>
-        <td><img src="./screenshot/Home.png" alt="" width="200"></td>
-        <td><img src="./screenshot/Account.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/Login.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/Home.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/Account.png" alt="" width="200"></td>
     <tr>
 </table>
 
@@ -94,9 +94,9 @@ ___
         <th style="text-align:center">Cart Screen</th>
     </tr>
     <tr>
-        <td><img src="./screenshot/Products.png" alt="" width="200"></td>
-        <td><img src="./screenshot/DetailsProduct.png" alt="" width="200"></td>
-        <td><img src="./screenshot/Cart.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/Products.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/DetailsProduct.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/Cart.png" alt="" width="200"></td>
     <tr>
 </table>
 
@@ -107,9 +107,9 @@ ___
         <th style="text-align:center">Add Credit card Screen</th>
     </tr>
     <tr>
-        <td><img src="./screenshot/Ckeckout.png" alt="" width="200"></td>
-        <td><img src="./screenshot/Screenshot_20210607-144922.png" alt="" width="200"></td>
-        <td><img src="./screenshot/Screenshot_20210607-144929.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/Ckeckout.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/Screenshot_20210607-144922.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/Screenshot_20210607-144929.png" alt="" width="200"></td>
     <tr>
 </table>
 
@@ -120,9 +120,9 @@ ___
         <th style="text-align:center">My Shopping Screen</th>
     </tr>
     <tr>
-        <td><img src="./screenshot/Screenshot_20210607-144850.png" alt="" width="200"></td>
-        <td><img src="./screenshot/Favorite.png" alt="" width="200"></td>
-        <td><img src="./screenshot/Shopping.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/Screenshot_20210607-144850.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/Favorite.png" alt="" width="200"></td>
+        <td><img src="./Screenshot/Shopping.png" alt="" width="200"></td>
     <tr>
 </table>
 
@@ -132,8 +132,8 @@ ___
         <th style="text-align:center">Add New Product</th>
     </tr>
     <tr>
-        <td><img src="./screenshot/Category.png" alt="Category" width="200"></td>
-        <td><img src="./screenshot/add-new-product.png" alt="add-new-product" width="200"></td>
+        <td><img src="./Screenshot/Category.png" alt="Category" width="200"></td>
+        <td><img src="./Screenshot/add-new-product.png" alt="add-new-product" width="200"></td>
     <tr>
 </table>
 
