@@ -1,36 +1,61 @@
-# E-COMMERCE APP PRODUCTS | FRAVE DEVELOPER
 
+<div align="center">
 
-## Flutter Project
+  ### <img src="https://avatars.githubusercontent.com/u/76232843?s=400&u=52234351df87372dea43a90243320f9e6a78e70c&v=4" height="100px"/> 
 
-- Flutter Bloc | Splash Screen | Stripe Payment
+  ***FRAVE DEVELOPER***
+</div>
 
-## Flutter App - Flutter Bloc | Splash Screen | Stripe Payment
+<div align="center">
+  E-COMMERCE APP PRODUCTS
+</div>
+
+<br>
+<table align="center">
+    <tr>
+        <th style="text-align:center">
+            <a href="https://cutt.ly/pckBg9D">
+                <img src="https://cdn.svgporn.com/logos/youtube-icon.svg" width="40">
+            </a>
+        </th>
+        <th style="text-align:center">
+            <a href="https://www.instagram.com/frave_developer">
+                <img src="https://github.com/aritraroy/social-icons/blob/master/instagram-icon.png?raw=true" width="40">
+            </a>
+        </th>
+        <th style="text-align:center">
+            <a href="#">
+                <img src="https://cdn.svgporn.com/logos/google-gmail.svg" width="30">
+            </a>
+        </th>
+    </tr>
+</table>
+<br>
+
 ___
 ## Branch Mongodb -> Support Database MongoDB
 
+## FIRST
+```
+    flutter clean
+```
+## SECOND
+```
+    flutter pub get
+```
 
-### Yotube Channel
-
-[Frave Developer](https://www.youtube.com/channel/UCkNYlmbx487MPmYvfSMAdRg)
-
-### Video Yotube
+## Video Yotube
 
 [Flutter Ecommerce Full App](https://youtu.be/zg6_GxQwDx0)
 
-### Social Media
 
-<a href="https://www.instagram.com/frave_developer"><img src="https://github.com/aritraroy/social-icons/blob/master/instagram-icon.png?raw=true" width="50"></a>
+## Donate
 
-### Donate
-
-<a href="https://www.buymeacoffee.com/frave"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="200"></a>
-<a href="https://www.paypal.me/Fpereza"><img src="https://cdn.svgporn.com/logos/paypal.svg" width="50"></a>
+<a href="https://www.buymeacoffee.com/frave"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="150"></a>
+<a href="https://www.paypal.me/Fpereza"><img src="https://cdn.svgporn.com/logos/paypal.svg" width="45"></a>
 <a>[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I1C3R4S)</a>
 
-## Backend
-
-- [Backend Link](https://github.com/Frave07/Backend-E_commerce-Products-NodeJs)
+## [Code Backend](https://github.com/Frave07/Backend-E_commerce-Products-NodeJs)
 
 ___
 

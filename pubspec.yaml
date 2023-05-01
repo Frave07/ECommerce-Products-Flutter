@@ -1,49 +1,42 @@
 name: e_commers
 description: A new Flutter project.
 
-# The following line prevents the package from being accidentally published to
-# pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: "none" # Remove this line if you wish to publish to pub.dev
+publish_to: "none"
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.15.0 <3.0.0"
+  sdk: ">=2.19.4 <3.0.0"
 
 dependencies:
-  animate_do: ^2.0.0
-  carousel_slider: ^4.0.0
-  cupertino_icons: ^1.0.2
+  animate_do: ^3.0.2
+  carousel_slider: ^4.2.1
+  cupertino_icons: ^1.0.5
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.0.0
-  flutter_rating_bar: ^4.0.0
-  flutter_secure_storage: ^5.0.2
-  flutter_svg: ^1.0.0
+  flutter_bloc: ^8.1.2
+  flutter_rating_bar: ^4.0.1
+  flutter_secure_storage: ^8.0.0
+  flutter_svg: ^2.0.5
   form_field_validator: ^1.1.0
-  google_fonts: ^2.1.0
-  http: ^0.13.4
-  image_picker: ^0.8.4+4
-  permission_handler: ^8.3.0
+  google_fonts: ^4.0.4
+  http: ^0.13.5
+  image_picker: ^0.8.7+4
+  permission_handler: ^10.2.0
   shimmer: ^2.0.0
-  stripe_payment: ^1.1.1
-  timeago: ^3.1.0
+  # stripe_payment: ^1.1.4
+  timeago: ^3.4.0
 
 dev_dependencies:
-  flutter_lints: ^1.0.0
+  flutter_lints: ^2.0.1
   flutter_test:
     sdk: flutter
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-# The following section is specific to Flutter.
+
 flutter:
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
+
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
     - assets/svg/
