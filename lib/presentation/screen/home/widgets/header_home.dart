@@ -3,7 +3,7 @@ import 'package:e_commers/data/env/env.dart';
 import 'package:e_commers/domain/blocs/blocs.dart';
 import 'package:e_commers/presentation/components/widgets.dart';
 import 'package:e_commers/presentation/helpers/helpers.dart';
-import 'package:e_commers/presentation/screen/cart/cart_page.dart';
+import 'package:e_commers/presentation/screen/cart/payment_card_page.dart';
 import 'package:e_commers/presentation/themes/colors_frave.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -45,7 +45,7 @@ class HeaderHome extends StatelessWidget {
           ),
           InkWell(
             borderRadius: BorderRadius.circular(20.0),
-            onTap: () => Navigator.of(context).pushAndRemoveUntil(routeSlide(page: CartPage()), (_) => false),
+            onTap: () => Navigator.of(context).pushAndRemoveUntil(routeSlide(page: PaymentCardPage()), (_) => false),
             child: Stack(
               children: [
                 FadeInRight(

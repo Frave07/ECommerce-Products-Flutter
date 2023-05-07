@@ -4,7 +4,6 @@ import 'package:e_commers/domain/blocs/blocs.dart';
 import 'package:e_commers/presentation/helpers/helpers.dart';
 import 'package:e_commers/presentation/screen/home/home_page.dart';
 import 'package:e_commers/presentation/screen/profile/profile_page.dart';
-import 'package:e_commers/presentation/screen/cart/cart_page.dart';
 import 'package:e_commers/presentation/screen/favorite/favorite_page.dart';
 import 'package:e_commers/presentation/themes/colors_frave.dart';
 import 'package:flutter/material.dart';

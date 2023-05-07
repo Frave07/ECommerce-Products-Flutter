@@ -41,7 +41,10 @@ class BottomNavigationFrave extends StatelessWidget{
               CenterIcon(
                 index: 3,
                 iconString: 'Assets/svg/bolso.svg',
-                onPressed: () => Navigator.pushAndRemoveUntil(context, routeSlide(page: CartPage()), (_) => false),
+                // onPressed: () => Navigator.pushAndRemoveUntil(context, routeSlide(page: CartPage()), (_) => false),
+                onPressed: () {
+                  
+                },
               ),
               _ItemButtom(
                 i: 4,
