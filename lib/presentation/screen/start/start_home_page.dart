@@ -12,7 +12,7 @@ class StartHomePage extends StatelessWidget {
         backgroundColor: Color(0xff1E4DD8),
         body: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15.0),
+            padding: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -30,16 +30,18 @@ class StartHomePage extends StatelessWidget {
                             child: Image.asset('assets/fraved_logo.png')
                           ),
                         ),
-                        SizedBox(height: 15.0),
-                        TextFrave(
-                          text: 'FRAVE SHOP', 
+                        const SizedBox(height: 15.0),
+                        const TextFrave(
+                          text: 'FRAVED SHOP', 
+                          isTitle: true,
                           fontSize: 32, 
                           fontWeight: FontWeight.bold, 
                           color: Colors.white
                         ),
-                        TextFrave(
+                        const TextFrave(
                           text: 'All your products in your hands', 
                           fontSize: 20, 
+                          isTitle: true,
                           color: Colors.white70
                         ),
                       ],
@@ -51,35 +53,35 @@ class StartHomePage extends StatelessWidget {
                   flex: 2,
                   child: Container(
                     child: ListView(
-                      physics: BouncingScrollPhysics(),
+                      physics: const BouncingScrollPhysics(),
                       children: [
                         BtnFrave(
-                          text: 'Sign up with email ID', 
+                          text: 'Sign in with email', 
                           colorText: Colors.white,
                           backgroundColor: Color(0xff1C2834), 
-                          onPressed: () => Navigator.of(context).pushNamed('signUpPage'), 
+                          onPressed: () => Navigator.of(context).pushNamed('signInPage'), 
                           width: size.width
                         ),
-                        SizedBox(height: 15.0),
+                        const SizedBox(height: 15.0),
                         BtnFrave(
-                          text: 'Sign up with Google', 
+                          text: 'Sign in with Google', 
                           colorText: Colors.black87,
                           fontSize: 19,
                           backgroundColor: Color(0xFFE9EFF9), 
                           width: size.width
                         ),
-                        SizedBox(height: 10.0),
+                        const SizedBox(height: 10.0),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             TextFrave(
-                              text: 'Already have an account?', 
+                              text: 'Don\'t have an account?', 
                               fontSize: 17,
                               color: Colors.grey.shade400,
                             ),
                             TextButton(
-                              child: TextFrave(text: 'Sign In', fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
-                              onPressed: () => Navigator.of(context).pushNamed('signInPage'),
+                              child: TextFrave(text: 'Sign up', fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
+                              onPressed: () => Navigator.of(context).pushNamed('signUpPage'),
                             ),
                           ],
                         ), 

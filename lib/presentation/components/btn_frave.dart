@@ -10,6 +10,7 @@ class BtnFrave extends StatelessWidget {
   final Color backgroundColor;
   final double fontSize;
   final VoidCallback? onPressed;
+  final FontWeight fontWeight;
 
   const BtnFrave({
     Key? key,
@@ -20,7 +21,8 @@ class BtnFrave extends StatelessWidget {
     this.border = 8.0,
     this.colorText = Colors.white,
     this.fontSize = 19,
-    this.backgroundColor = ColorsFrave.primaryColorFrave
+    this.backgroundColor = ColorsFrave.primaryColorFrave,
+    this.fontWeight = FontWeight.normal
   }) : super(key: key);
 
 
@@ -35,7 +37,12 @@ class BtnFrave extends StatelessWidget {
           backgroundColor: backgroundColor,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(border))
         ),
-        child: TextFrave(text: text, color: colorText, fontSize: fontSize),
+        child: TextFrave(
+          text: text, 
+          color: colorText, 
+          fontSize: fontSize,
+          fontWeight: fontWeight,
+        ),
         onPressed: onPressed, 
       ),
     );

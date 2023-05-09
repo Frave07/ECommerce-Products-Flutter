@@ -23,7 +23,7 @@ class TextFormFrave extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
-      style: GoogleFonts.getFont('Roboto', fontSize: 18),
+      style: GoogleFonts.getFont('Roboto', fontSize: 17),
       cursorColor: ColorsFrave.secundaryColorFrave,
       obscureText: isPassword,
       keyboardType: keyboardType,

@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:e_commers/presentation/screen/login/loading_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
 class SignInPage extends StatefulWidget {
   @override
   _SignInPageState createState() => _SignInPageState();
@@ -15,8 +14,8 @@ class SignInPage extends StatefulWidget {
 
 class _SignInPageState extends State<SignInPage> {
 
-  late TextEditingController _emailController;
-  late TextEditingController _passowrdController;
+  late final TextEditingController _emailController;
+  late final TextEditingController _passowrdController;
   final _keyForm = GlobalKey<FormState>();
   bool isChangeSuffixIcon = true;
 
@@ -61,12 +60,16 @@ class _SignInPageState extends State<SignInPage> {
         appBar: AppBar(
           leading: IconButton(
             splashRadius: 20,
-            icon: Icon(Icons.close_rounded, size: 25, color: Colors.black),
+            icon: const Icon(Icons.close_rounded, size: 25, color: Colors.black),
             onPressed: ()=> Navigator.pop(context),
           ),
           actions: [
             TextButton(
-              child: TextFrave(text: 'Register', fontSize: 18, color: Color(0xff0C6CF2),),
+              child: TextFrave(
+                text: 'Register', 
+                fontSize: 18, 
+                color: Color(0xff0C6CF2),
+              ),
               onPressed: () => Navigator.of(context).pushReplacementNamed('signUpPage'),
             )
           ],
@@ -77,8 +80,8 @@ class _SignInPageState extends State<SignInPage> {
           child: Form(
             key: _keyForm,
             child: ListView(
-              padding: EdgeInsets.symmetric(horizontal: 10.0),
-              physics: BouncingScrollPhysics(),
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              physics: const BouncingScrollPhysics(),
               children: [
     
                 const SizedBox(height: 20),
@@ -92,14 +95,14 @@ class _SignInPageState extends State<SignInPage> {
                   keyboardType: TextInputType.emailAddress,
                   validator: validatedEmail,
                   hintText: 'Enter your Email ID',
-                  prefixIcon: Icon(Icons.alternate_email_rounded),
+                  prefixIcon: const Icon(Icons.alternate_email_rounded),
                 ),
                 const SizedBox(height: 20),
                 TextFormFrave(
                   controller: _passowrdController,
                   isPassword: isChangeSuffixIcon,
                   hintText: 'Enter your password',
-                  prefixIcon: Icon(Icons.password_rounded),
+                  prefixIcon: const Icon(Icons.password_rounded),
                   validator: passwordValidator,
                 ),
                 const SizedBox(height:  40),

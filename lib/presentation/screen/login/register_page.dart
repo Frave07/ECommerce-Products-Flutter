@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
-
 class SignUpPage extends StatefulWidget {
   @override
   State<SignUpPage> createState() => _SignUpPageState();
@@ -16,10 +15,10 @@ class SignUpPage extends StatefulWidget {
 
 class _SignUpPageState extends State<SignUpPage> {
 
-  late TextEditingController userController;
-  late TextEditingController emailController;
-  late TextEditingController passowrdController;
-  late TextEditingController passController;
+  late final TextEditingController userController;
+  late final TextEditingController emailController;
+  late final TextEditingController passowrdController;
+  late final TextEditingController passController;
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -57,11 +56,9 @@ class _SignUpPageState extends State<SignUpPage> {
     return BlocListener<UserBloc, UserState>(
       listener: (context, state) {
         if( state is LoadingUserState ){
-
           modalLoading(context, 'Validating...');
         }
         if( state is SuccessUserState ){
-          
           Navigator.of(context).pop();
           modalSuccess(context,'USER CREATED', onPressed: (){
             clear();
@@ -69,7 +66,6 @@ class _SignUpPageState extends State<SignUpPage> {
           });
         }
         if( state is FailureUserState ){
-
           Navigator.of(context).pop();
           errorMessageSnack(context, state.error);
         }
@@ -86,55 +82,67 @@ class _SignUpPageState extends State<SignUpPage> {
           ),
           actions: [
             TextButton(
-              child: const TextFrave(text: 'Log In', fontSize: 17, color: ColorsFrave.primaryColorFrave ),
+              child: const TextFrave(
+                text: 'Log In', 
+                fontSize: 17, 
+                color: ColorsFrave.primaryColorFrave,
+                fontWeight: FontWeight.w500,
+              ),
               onPressed: () => Navigator.of(context).pushReplacementNamed('signInPage'),
             ),
-            SizedBox(width: 5)
+            const SizedBox(width: 5)
           ],
         ),
         body: Form(
           key: _formKey,
           child: ListView(
-            padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
+            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
             keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             children: [
-              TextFrave(text: 'Welcome to Frave Shop', fontSize: 24, fontWeight: FontWeight.w600),
-              SizedBox(height: 5.0),
-              TextFrave(text: 'Create Account', fontSize: 17),
-              SizedBox(height: 20.0),
+              const TextFrave(
+                text: 'Welcome to Fraved Shop', 
+                fontSize: 24, 
+                fontWeight: FontWeight.bold
+              ),
+              const SizedBox(height: 5.0),
+              TextFrave(
+                text: 'Create Account', 
+                fontSize: 17,
+                color: Colors.blue.shade600,
+              ),
+              const SizedBox(height: 20.0),
               TextFormFrave(
                 hintText: 'Username',
-                prefixIcon: Icon(Icons.person),
+                prefixIcon: const Icon(Icons.person),
                 controller: userController,
                 validator: RequiredValidator(errorText: 'Username is required'),
               ),
-              
-              SizedBox(height: 15.0),
+              const SizedBox(height: 15.0),
               TextFormFrave(
                 hintText: 'Email Address',
                 keyboardType: TextInputType.emailAddress,
-                prefixIcon: Icon(Icons.email_outlined),
+                prefixIcon: const Icon(Icons.email_outlined),
                 controller: emailController,
                 validator: validatedEmail
               ),
-              SizedBox(height: 15.0),
+              const SizedBox(height: 15.0),
               TextFormFrave(
                 hintText: 'Password',
-                prefixIcon: Icon(Icons.vpn_key_rounded),
+                prefixIcon: const Icon(Icons.vpn_key_rounded),
                 isPassword: true,
                 controller: passowrdController,
                 validator: passwordValidator,
               ),
-              SizedBox(height: 15.0),
+              const SizedBox(height: 15.0),
               TextFormFrave(
                 hintText: 'Repeat Password',
                 controller: passController,
-                prefixIcon: Icon(Icons.vpn_key_rounded),
+                prefixIcon: const Icon(Icons.vpn_key_rounded),
                 isPassword: true,
                 validator: (val) => MatchValidator(errorText: 'Password do not macth ').validateMatch(val!, passowrdController.text)
               ),
-              SizedBox(height: 25.0),
+              const SizedBox(height: 25.0),
 
               Row(
                 children: const [
@@ -144,22 +152,27 @@ class _SignUpPageState extends State<SignUpPage> {
                 ],
               ),
 
-              SizedBox(height: 25.0),
-              BtnFrave(
-                text: 'Sign Up',
-                width: size.width,
-                fontSize: 20,
-                onPressed: (){
-                  if( _formKey.currentState!.validate() ){
-                    userBloc.add( OnAddNewUser( 
-                      userController.text.trim(), 
-                      emailController.text.trim(), 
-                      passowrdController.text.trim()
-                    ));
-                  }
-                },
-              )
             ],
+          ),
+        ),
+        bottomNavigationBar: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: BtnFrave(
+              text: 'Sign up',
+              width: size.width,
+              fontSize: 20,
+              border: 10,
+              onPressed: (){
+                if( _formKey.currentState!.validate() ){
+                  userBloc.add( OnAddNewUser( 
+                    userController.text.trim(), 
+                    emailController.text.trim(), 
+                    passowrdController.text.trim()
+                  ));
+                }
+              },
+            ),
           ),
         ),
        ),

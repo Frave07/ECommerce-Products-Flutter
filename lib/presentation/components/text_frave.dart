@@ -10,6 +10,7 @@ class TextFrave extends StatelessWidget {
   final TextOverflow overflow;
   final TextAlign textAlign;
   final double? letterSpacing;
+  final bool isTitle;
 
   const TextFrave({
     Key? key, 
@@ -21,13 +22,14 @@ class TextFrave extends StatelessWidget {
     this.overflow = TextOverflow.visible,
     this.textAlign = TextAlign.left,
     this.letterSpacing,
+    this.isTitle = false,
   }) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.getFont('Roboto', fontSize: fontSize, fontWeight: fontWeight, color: color, letterSpacing: letterSpacing),
+      style: GoogleFonts.getFont( isTitle ? 'Poppins' : 'Roboto', fontSize: fontSize, fontWeight: fontWeight, color: color, letterSpacing: letterSpacing),
       maxLines: maxLines,
       overflow: overflow,
       textAlign: textAlign,
