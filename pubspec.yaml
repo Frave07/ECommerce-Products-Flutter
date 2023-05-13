@@ -6,7 +6,7 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.19.4 <3.0.0"
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   animate_do: ^3.0.2
@@ -21,11 +21,12 @@ dependencies:
   form_field_validator: ^1.1.0
   google_fonts: ^4.0.4
   http: ^0.13.6
-  image_picker: ^0.8.7+4
+  image_picker: ^0.8.7+5
   permission_handler: ^10.2.0
   shimmer: ^2.0.0
   # stripe_payment: ^1.1.4
   timeago: ^3.4.0
+  supabase_flutter: ^1.9.1
 
 dev_dependencies:
   flutter_lints: ^2.0.1
