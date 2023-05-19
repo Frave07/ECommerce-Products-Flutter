@@ -3,8 +3,9 @@ import 'package:e_commers/presentation/components/widgets.dart';
 import 'package:e_commers/presentation/helpers/helpers.dart';
 import 'package:e_commers/presentation/helpers/validation_form.dart';
 import 'package:e_commers/presentation/screen/home/home_page.dart';
-import 'package:flutter/material.dart';
 import 'package:e_commers/presentation/screen/login/loading_page.dart';
+import 'package:e_commers/presentation/themes/colors_frave.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignInPage extends StatefulWidget {
@@ -61,14 +62,14 @@ class _SignInPageState extends State<SignInPage> {
           leading: IconButton(
             splashRadius: 20,
             icon: const Icon(Icons.close_rounded, size: 25, color: Colors.black),
-            onPressed: ()=> Navigator.pop(context),
+            onPressed: () => Navigator.pop(context),
           ),
           actions: [
             TextButton(
               child: TextFrave(
                 text: 'Register', 
                 fontSize: 18, 
-                color: Color(0xff0C6CF2),
+                color: ColorsFrave.primaryColorFrave,
               ),
               onPressed: () => Navigator.of(context).pushReplacementNamed('signUpPage'),
             )
@@ -110,7 +111,9 @@ class _SignInPageState extends State<SignInPage> {
                 BtnFrave(
                   text: 'Continue',
                   width: size.width,
-                  fontSize: 20,
+                  fontSize: 18,
+                  isTitle: true,
+                  fontWeight: FontWeight.w600,
                   onPressed: (){
                     if( _keyForm.currentState!.validate() ){
                       authBloc.add(LoginEvent(_emailController.text.trim(), _passowrdController.text.trim()));
@@ -122,7 +125,13 @@ class _SignInPageState extends State<SignInPage> {
                 Align(
                   alignment: Alignment.center,
                   child: TextButton(
-                    child: TextFrave(text: 'Forgot password?', color: Colors.black, fontSize: 17),
+                    child: TextFrave(
+                      text: 'Forgot password?', 
+                      color: Colors.black, 
+                      fontSize: 17,
+                      isTitle: true,
+                      fontWeight: FontWeight.w500,
+                    ),
                     onPressed: () => Navigator.push(context, routeSlide(page: LoadingPage()))
                   ),
                 ),

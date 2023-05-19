@@ -103,7 +103,8 @@ class _SignUpPageState extends State<SignUpPage> {
               const TextFrave(
                 text: 'Welcome to Fraved Shop', 
                 fontSize: 24, 
-                fontWeight: FontWeight.bold
+                fontWeight: FontWeight.bold,
+                isTitle: true,
               ),
               const SizedBox(height: 5.0),
               TextFrave(
@@ -151,7 +152,6 @@ class _SignUpPageState extends State<SignUpPage> {
                   TextFrave(text: ' Terms of Use', fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xff0C6CF2)),
                 ],
               ),
-
             ],
           ),
         ),
@@ -161,8 +161,10 @@ class _SignUpPageState extends State<SignUpPage> {
             child: BtnFrave(
               text: 'Sign up',
               width: size.width,
-              fontSize: 20,
-              border: 10,
+              fontSize: 18,
+              isTitle: true,
+              fontWeight: FontWeight.w600,
+              border: 60,
               onPressed: (){
                 if( _formKey.currentState!.validate() ){
                   userBloc.add( OnAddNewUser( 

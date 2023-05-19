@@ -11,6 +11,7 @@ class BtnFrave extends StatelessWidget {
   final double fontSize;
   final VoidCallback? onPressed;
   final FontWeight fontWeight;
+  final bool isTitle;
 
   const BtnFrave({
     Key? key,
@@ -22,7 +23,8 @@ class BtnFrave extends StatelessWidget {
     this.colorText = Colors.white,
     this.fontSize = 19,
     this.backgroundColor = ColorsFrave.primaryColorFrave,
-    this.fontWeight = FontWeight.normal
+    this.fontWeight = FontWeight.normal,
+    this.isTitle = false
   }) : super(key: key);
 
 
@@ -42,6 +44,7 @@ class BtnFrave extends StatelessWidget {
           color: colorText, 
           fontSize: fontSize,
           fontWeight: fontWeight,
+          isTitle: isTitle,
         ),
         onPressed: onPressed, 
       ),

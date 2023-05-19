@@ -32,7 +32,7 @@ class StartHomePage extends StatelessWidget {
                         ),
                         const SizedBox(height: 15.0),
                         const TextFrave(
-                          text: 'FRAVED SHOP', 
+                          text: 'Fraved Shop', 
                           isTitle: true,
                           fontSize: 32, 
                           fontWeight: FontWeight.bold, 
@@ -57,6 +57,11 @@ class StartHomePage extends StatelessWidget {
                       children: [
                         BtnFrave(
                           text: 'Sign in with email', 
+                          isTitle: true,
+                          height: 55,
+                          fontSize: 18,
+                          border: 60,
+                          fontWeight: FontWeight.w600,
                           colorText: Colors.white,
                           backgroundColor: Color(0xff1C2834), 
                           onPressed: () => Navigator.of(context).pushNamed('signInPage'), 
@@ -66,7 +71,10 @@ class StartHomePage extends StatelessWidget {
                         BtnFrave(
                           text: 'Sign in with Google', 
                           colorText: Colors.black87,
-                          fontSize: 19,
+                          fontSize: 18,
+                          border: 60,
+                          isTitle: true,
+                          fontWeight: FontWeight.w600,
                           backgroundColor: Color(0xFFE9EFF9), 
                           width: size.width
                         ),
@@ -77,7 +85,7 @@ class StartHomePage extends StatelessWidget {
                             TextFrave(
                               text: 'Don\'t have an account?', 
                               fontSize: 17,
-                              color: Colors.grey.shade400,
+                              color: Colors.white70,
                             ),
                             TextButton(
                               child: TextFrave(text: 'Sign up', fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),

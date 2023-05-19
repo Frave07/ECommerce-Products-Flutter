@@ -29,18 +29,18 @@ class BottomNavigationFrave extends StatelessWidget{
               _ItemButtom(
                 i: 1,
                 index: index,
-                iconString: 'Assets/svg/home.svg',
+                iconString: 'assets/svg/home.svg',
                 onPressed: () => Navigator.pushAndRemoveUntil(context, routeSlide(page: HomePage()), (_) => false),
               ),
               _ItemButtom(
                 i: 2,
                 index: index,
-                iconString: 'Assets/svg/favorite.svg',
+                iconString: 'assets/svg/favorite.svg',
                 onPressed: () => Navigator.pushAndRemoveUntil(context, routeSlide(page: FavoritePage()), (_) => false),
               ),
               CenterIcon(
                 index: 3,
-                iconString: 'Assets/svg/bolso.svg',
+                iconString: 'assets/svg/bolso.svg',
                 // onPressed: () => Navigator.pushAndRemoveUntil(context, routeSlide(page: CartPage()), (_) => false),
                 onPressed: () {
                   
@@ -49,7 +49,7 @@ class BottomNavigationFrave extends StatelessWidget{
               _ItemButtom(
                 i: 4,
                 index: index,
-                iconString: 'Assets/svg/search.svg',
+                iconString: 'assets/svg/search.svg',
                 onPressed: () {},
               ),
               _ItemProfile()

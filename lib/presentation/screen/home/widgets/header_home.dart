@@ -52,7 +52,7 @@ class HeaderHome extends StatelessWidget {
                   child: Container(
                     height: 32,
                     width: 32,
-                    child: SvgPicture.asset('Assets/bolso-negro.svg', height: 25 )
+                    child: SvgPicture.asset('assets/bolso-negro.svg', height: 25 )
                   )
                 ),
                 Positioned(

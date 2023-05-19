@@ -2,13 +2,12 @@ import 'package:e_commers/domain/blocs/blocs.dart';
 import 'package:e_commers/presentation/components/widgets.dart';
 import 'package:e_commers/presentation/helpers/helpers.dart';
 import 'package:e_commers/presentation/screen/categories/categories_page.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:e_commers/presentation/screen/home/widgets/carousel_home.dart';
 import 'package:e_commers/presentation/screen/home/widgets/header_home.dart';
 import 'package:e_commers/presentation/screen/home/widgets/list_categories_home.dart';
 import 'package:e_commers/presentation/screen/home/widgets/list_products_home.dart';
-
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomePage extends StatefulWidget {
   @override
